@@ -9,10 +9,10 @@ function addBloomSphere(color, rad, opa, radInc, opaDec, stp) {
 
     for (let i = 0; i < stp; i++) {
         // Create sphere geometry
-        const geometry = new THREE.SphereGeometry(radius, 128, 128);
+        const geometry = new THREE.SphereGeometry(radius, 64, 64);
 
         // Create sphere material
-        const material = new THREE.MeshPhongMaterial({
+        const material = new THREE.MeshBasicMaterial({
             color: color,
             transparent: true,
             opacity: opacity
@@ -30,14 +30,4 @@ function addBloomSphere(color, rad, opa, radInc, opaDec, stp) {
     }
 
     return bloomSphere
-}
-
-async function updateSphereValues() {
-    const sphereValues = await getSphereValues();
-    sphere.clear();
-
-    displayPointers();
-
-    console.log(sphereValues[5], sphereValues[2], sphereValues[1], sphereValues[2], sphereValues[3], sphereValues[0]);
-    addBloomSphere(sphereValues[5], sphereValues[2], sphereValues[1], sphereValues[2], sphereValues[3], sphereValues[0])
 }

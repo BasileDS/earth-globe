@@ -1,19 +1,12 @@
 html {
     margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 body {
-    background: -moz-linear-gradient(162deg, rgb(11, 4, 4) 0%, rgb(0, 0, 0) 62%);
-    background: -webkit-linear-gradient(162deg, rgb(11, 4, 4) 0%, rgb(0, 0, 0) 62%);
-    background: linear-gradient(162deg, rgb(11, 4, 4) 0%, rgb(0, 0, 0) 62%);
+    background: radial-gradient(circle at bottom right,#004266 0%,#19253d 27%,#020000 100%);
     height: 100vh;
     margin: 0;
-}
-
-canvas {
-    position: absolute;
-    top: 0;
-    right: 0;
 }
 
 .fst-div {
@@ -22,32 +15,42 @@ canvas {
 
 .sec-div {
     height: 100vh;
-    background: #303035;
+    background: radial-gradient(circle at top right,#004266 0%,#19253d 27%,#020000 100%);
 }
 
-#parameters {
-    position: fixed;
-    display: flex;
-    top: 50px;
-    right: 50px;
-    padding: 12px;
-    border-radius: 5px;
-    background-color: rgb(0, 0, 0);
-    border: 1px solid rgb(79, 79, 79);
-    font-family: arial;
-    font-size: 12px;
+/* All plugin css styles are below this line */
+.no-pointer-events {
+    pointer-events: none;
 }
 
-#controls {
-    display: flex;
-    flex-direction: column;
-    color: white;
+canvas {
+    position: absolute;
+    /* top: 0;
+    right: 0; */
 }
 
-#values {
+.title-section {
+    position: absolute;
+    top: 0;
+    left: 0;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
     color: white;
-    margin-top: 7px;
-    margin-left: 10px;
+    z-index: 1;
+}
+
+.title-elements {
+    max-width: 700px;
+    margin-left: 200px;
+}
+
+.title-elements h1 {
+    font-size: 45px;
+}
+
+.title-elements p {
+    font-size: 25px;
 }

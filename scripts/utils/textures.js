@@ -48,9 +48,9 @@ function getGradientShaders() {
 };
 
 function getGoldMaterial() {
-    const goldMaterial = new THREE.MeshPhongMaterial({
+    const goldMaterial = new THREE.MeshStandardMaterial({
         color: 0xffa600, // Gold color
-        metalness: 0,
+        metalness: 1,
         emissive: new THREE.Color(0x030875).multiplyScalar(0.5), 
         emissiveIntensity: 0.5
 

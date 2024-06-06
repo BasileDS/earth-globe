@@ -13,8 +13,8 @@ async function displayPointers() {
 // Get pointers from json file
 async function getPointers() {
 
-    const reponses = await fetch(`./data/pointers.json`)
-    // const reponses = await fetch('http://babacom.fr/wp-content/uploads/2024/05/pointers.json');
+    // const reponses = await fetch(`./wp-content/plugins/earth-globe/data/pointers.json`);
+    const reponses = await fetch(`./data/pointers.json`);
     console.log(reponses);
     return reponses.json()
 }

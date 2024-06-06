@@ -8,6 +8,8 @@ function resizeScene() {
 
     const width = window.innerWidth;
     const height = window.innerHeight;
+    // const width = 1080;
+    // const height = 1080;
 
     renderer.setSize(width, height);
     

@@ -1,6 +1,6 @@
 // Adding a sphere
-// const sphereMaterial = getGradientShaders();
-const sphereMaterial = getGoldMaterial();
+const sphereMaterial = getGradientShaders();
+// const sphereMaterial = getGoldMaterial();
 
 const sphereGeometry = new THREE.SphereGeometry(4.5, 64, 64);
 const sphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
